@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ./resources/main.robot
+Resource          ../resources/main.robot
 Test Setup        Dado que acesso o site
 Test Teardown     Fechar o navegador
 
