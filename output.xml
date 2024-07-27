@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-27T15:34:32.278607" rpa="false" schemaversion="5">
+<suite id="s1" name="Primeiro Teste" source="c:\Users\limae\Documents\robot-projetoPadrao\primeiro_teste.robot">
+<test id="s1-t1" name="Validar cadastro com sucesso" line="8">
+<kw name="Dado que acesso o site" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-27T15:34:32.582167" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<arg>url=https://demo.automationtesting.in/Register.html</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-27T15:34:32.582167" elapsed="7.318396"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-07-27T15:34:39.900563" elapsed="0.413148"/>
+</kw>
+<status status="PASS" start="2024-07-27T15:34:32.581074" elapsed="7.732637"/>
+</kw>
+<kw name="Dado que eu preencha os campos do formulário" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T15:34:40.315700" level="INFO">Typing text 'Evelyn' into text field 'xpath=//input[@placeholder="First Name"]'.</msg>
+<arg>${NOME}</arg>
+<arg>Evelyn</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T15:34:40.314709" elapsed="0.185356"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T15:34:40.501064" level="INFO">Typing text 'Lima' into text field 'xpath=//input[@placeholder="Last Name"]'.</msg>
+<arg>${SOBRE_NOME}</arg>
+<arg>Lima</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T15:34:40.501064" elapsed="0.166092"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-27T15:34:40.668181" level="INFO">Typing text 'AV TESTE RECIFE' into text field 'xpath=//textarea[@ng-model="Adress"]'.</msg>
+<arg>${ENDERECO}</arg>
+<arg>AV TESTE RECIFE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T15:34:40.668181" elapsed="0.112935"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath://div[@id='msdd']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-07-27T15:34:40.781116" elapsed="0.283469"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T15:34:41.067116" level="INFO">Clicking element 'xpath://div[@id='msdd']'.</msg>
+<arg>xpath://div[@id='msdd']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-27T15:34:41.066098" elapsed="0.094865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LANGUAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-27T15:34:41.161974" elapsed="0.041184"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-27T15:34:41.204338" level="INFO">Clicking element 'xpath://li/a[text()='Bulgarian']'.</msg>
+<msg time="2024-07-27T15:34:42.480278" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-27T15:34:42.480278" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a style="text-decoration:none" class="ui-corner-all"&gt;...&lt;/a&gt; is not clickable at point (605, 608). Other element would receive the click: &lt;div class="grippy-host"&gt;&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	GetHandleVerifier [0x00007FF779EB9632+30946]
+	(No symbol) [0x00007FF779E6E3C9]
+	(No symbol) [0x00007FF779D66FDA]
+	(No symbol) [0x00007FF779DBFEEE]
+	(No symbol) [0x00007FF779DBD962]
+	(No symbol) [0x00007FF779DBAE7B]
+	(No symbol) [0x00007FF779DBA095]
+	(No symbol) [0x00007FF779DAC271]
+	(No symbol) [0x00007FF779DDCA6A]
+	(No symbol) [0x00007FF779DABBB6]
+	(No symbol) [0x00007FF779DDCC80]
+	(No symbol) [0x00007FF779DFB041]
+	(No symbol) [0x00007FF779DDC813]
+	(No symbol) [0x00007FF779DAA6E5]
+	(No symbol) [0x00007FF779DAB021]
+	GetHandleVerifier [0x00007FF779FEF83D+1301229]
+	GetHandleVerifier [0x00007FF779FFBDB7+1351783]
+	GetHandleVerifier [0x00007FF779FF2A03+1313971]
+	GetHandleVerifier [0x00007FF779EEDD06+245686]
+	(No symbol) [0x00007FF779E7758F]
+	(No symbol) [0x00007FF779E73804]
+	(No symbol) [0x00007FF779E73992]
+	(No symbol) [0x00007FF779E6A3EF]
+	BaseThreadInitThunk [0x00007FFCC5ED257D+29]
+	RtlUserThreadStart [0x00007FFCC7C6AF28+40]
+</msg>
+<arg>${LANGUAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-27T15:34:41.204338" elapsed="1.280946">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a style="text-decoration:none" class="ui-corner-all"&gt;...&lt;/a&gt; is not clickable at point (605, 608). Other element would receive the click: &lt;div class="grippy-host"&gt;&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	GetHandleVerifier [0x00007FF779EB9632+30946]
+	(No symbol) [0x00007FF779E6E3C9]
+	(No symbol) [0x00007FF779D66FDA]
+	(No symbol) [0x00007FF779DBFEEE]
+	(No symbol) [0x00007FF779DBD962]
+	(No symbol) [0x00007FF779DBAE7B]
+	(No symbol) [0x00007FF779DBA095]
+	(No symbol) [0x00007FF779DAC271]
+	(No symbol) [0x00007FF779DDCA6A]
+	(No symbol) [0x00007FF779DABBB6]
+	(No symbol) [0x00007FF779DDCC80]
+	(No symbol) [0x00007FF779DFB041]
+	(No symbol) [0x00007FF779DDC813]
+	(No symbol) [0x00007FF779DAA6E5]
+	(No symbol) [0x00007FF779DAB021]
+	GetHandleVerifier [0x00007FF779FEF83D+1301229]
+	GetHandleVerifier [0x00007FF779FFBDB7+1351783]
+	GetHandleVerifier [0x00007FF779FF2A03+1313971]
+	GetHandleVerifier [0x00007FF779EEDD06+245686]
+	(No symbol) [0x00007FF779E7758F]
+	(No symbol) [0x00007FF779E73804]
+	(No symbol) [0x00007FF779E73992]
+	(No symbol) [0x00007FF779E6A3EF]
+	BaseThreadInitThunk [0x00007FFCC5ED257D+29]
+	RtlUserThreadStart [0x00007FFCC7C6AF28+40]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://div[@id="Skills"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-27T15:34:42.485284" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>xpath://div[@id="Skills"]</arg>
+<arg>APIs</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-07-27T15:34:42.485284" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-27T15:34:40.314709" elapsed="2.171573">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a style="text-decoration:none" class="ui-corner-all"&gt;...&lt;/a&gt; is not clickable at point (605, 608). Other element would receive the click: &lt;div class="grippy-host"&gt;&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	GetHandleVerifier [0x00007FF779EB9632+30946]
+	(No symbol) [0x00007FF779E6E3C9]
+	(No symbol) [0x00007FF779D66FDA]
+	(No symbol) [0x00007FF779DBFEEE]
+	(No symbol) [0x00007FF779DBD962]
+	(No symbol) [0x00007FF779DBAE7B]
+	(No symbol) [0x00007FF779DBA095]
+	(No symbol) [0x00007FF779DAC271]
+	(No symbol) [0x00007FF779DDCA6A]
+	(No symbol) [0x00007FF779DABBB6]
+	(No symbol) [0x00007FF779DDCC80]
+	(No symbol) [0x00007FF779DFB041]
+	(No symbol) [0x00007FF779DDC813]
+	(No symbol) [0x00007FF779DAA6E5]
+	(No symbol) [0x00007FF779DAB021]
+	GetHandleVerifier [0x00007FF779FEF83D+1301229]
+	GetHandleVerifier [0x00007FF779FFBDB7+1351783]
+	GetHandleVerifier [0x00007FF779FF2A03+1313971]
+	GetHandleVerifier [0x00007FF779EEDD06+245686]
+	(No symbol) [0x00007FF779E7758F]
+	(No symbol) [0x00007FF779E73804]
+	(No symbol) [0x00007FF779E73992]
+	(No symbol) [0x00007FF779E6A3EF]
+	BaseThreadInitThunk [0x00007FFCC5ED257D+29]
+	RtlUserThreadStart [0x00007FFCC7C6AF28+40]
+</status>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-27T15:34:42.487278" elapsed="2.242677"/>
+</kw>
+<status status="PASS" start="2024-07-27T15:34:42.486282" elapsed="2.243673"/>
+</kw>
+<status status="FAIL" start="2024-07-27T15:34:32.580074" elapsed="12.150979">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a style="text-decoration:none" class="ui-corner-all"&gt;...&lt;/a&gt; is not clickable at point (605, 608). Other element would receive the click: &lt;div class="grippy-host"&gt;&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	GetHandleVerifier [0x00007FF779EB9632+30946]
+	(No symbol) [0x00007FF779E6E3C9]
+	(No symbol) [0x00007FF779D66FDA]
+	(No symbol) [0x00007FF779DBFEEE]
+	(No symbol) [0x00007FF779DBD962]
+	(No symbol) [0x00007FF779DBAE7B]
+	(No symbol) [0x00007FF779DBA095]
+	(No symbol) [0x00007FF779DAC271]
+	(No symbol) [0x00007FF779DDCA6A]
+	(No symbol) [0x00007FF779DABBB6]
+	(No symbol) [0x00007FF779DDCC80]
+	(No symbol) [0x00007FF779DFB041]
+	(No symbol) [0x00007FF779DDC813]
+	(No symbol) [0x00007FF779DAA6E5]
+	(No symbol) [0x00007FF779DAB021]
+	GetHandleVerifier [0x00007FF779FEF83D+1301229]
+	GetHandleVerifier [0x00007FF779FFBDB7+1351783]
+	GetHandleVerifier [0x00007FF779FF2A03+1313971]
+	GetHandleVerifier [0x00007FF779EEDD06+245686]
+	(No symbol) [0x00007FF779E7758F]
+	(No symbol) [0x00007FF779E73804]
+	(No symbol) [0x00007FF779E73992]
+	(No symbol) [0x00007FF779E6A3EF]
+	BaseThreadInitThunk [0x00007FFCC5ED257D+29]
+	RtlUserThreadStart [0x00007FFCC7C6AF28+40]
+</status>
+</test>
+<status status="FAIL" start="2024-07-27T15:34:32.285310" elapsed="12.457400"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Primeiro Teste">Primeiro Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
