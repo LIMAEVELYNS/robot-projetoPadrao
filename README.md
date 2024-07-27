@@ -1,10 +1,10 @@
-##Instalações:
+## Instalações:
 
   - Robot framework
   - Selenium library
   - Baixar chromeDriver
 
-##Estrutura do projeto:
+## Estrutura do projeto:
 
 - resources
     - pages 
