@@ -7,7 +7,9 @@
 ## Estrutura do projeto:
 
 - resources
-    - pages 
-    - shared
-    - manin.robot 
+    - pages
+      - Cadastro.robot = Com os Keywords
+      - CadastroElementos.robot = Com o mapeamento dos elementos 
+    - shared = Keywords que são em comuns de todas as features
+    - manin.robot =  Apontamento dos arquivos
 - testes - Arquivos com cenários de testes

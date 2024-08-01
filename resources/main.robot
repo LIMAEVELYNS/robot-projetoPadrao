@@ -4,3 +4,4 @@ Library    SeleniumLibrary
 
 Resource    shared/setup_teardown.robot
 Resource    pages/cadastro.robot
+Resource    pages/cadastroElementos.robot

@@ -5,5 +5,10 @@ Test Teardown     Fechar o navegador
 
 
 *** Test Cases ***
-Validar cadastro com sucesso    
+Validar cadastro genero Masculino com sucesso    
     Dado que eu preencha os campos do formulário
+    Selecionar genero 'Masculino'
+
+Validar cadastro genero Feminino com sucesso    
+    Dado que eu preencha os campos do formulário
+    Selecionar genero 'Feminino'
