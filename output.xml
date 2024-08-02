@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-01T21:36:50.719534" rpa="false" schemaversion="5">
+<suite id="s1" name="Primeiro Teste" source="c:\Users\limae\Documents\robot-projetoPadrao\testes\primeiro_teste.robot">
+<test id="s1-t1" name="Validar cadastro selecionando Hobbies" line="16">
+<kw name="Dado que acesso o site" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:36:51.037899" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<arg>url=https://demo.automationtesting.in/Register.html</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-01T21:36:51.035637" elapsed="10.969574"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-08-01T21:37:02.005211" elapsed="0.413067"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:36:51.027324" elapsed="11.390954"/>
+</kw>
+<kw name="Dado que eu preencha os campos do formulário" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:02.426231" level="INFO">Typing text 'EVELYN' into text field 'xpath=//input[@placeholder="First Name"]'.</msg>
+<arg>${NOME}</arg>
+<arg>EVELYN</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:02.426231" elapsed="0.310682"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:02.743784" level="INFO">Typing text 'TESTE' into text field 'xpath=//input[@placeholder="Last Name"]'.</msg>
+<arg>${SOBRE_NOME}</arg>
+<arg>TESTE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:02.743784" elapsed="0.227745"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:02.971529" level="INFO">Typing text 'AV TESTE RECIFE' into text field 'xpath=//textarea[@ng-model="Adress"]'.</msg>
+<arg>${ENDERECO}</arg>
+<arg>AV TESTE RECIFE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:02.971529" elapsed="0.246538"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:03.218067" level="INFO">Typing text 'TESTE@TESTE.COM.BR' into text field 'xpath=//input[@ng-model="EmailAdress"]'.</msg>
+<arg>${EMAIL}</arg>
+<arg>TESTE@TESTE.COM.BR</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:03.218067" elapsed="0.218483"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:03.436550" level="INFO">Typing text '81999999999' into text field 'xpath=//input[@ng-model="Phone"]'.</msg>
+<arg>${PHONE}</arg>
+<arg>81999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:03.436550" elapsed="0.203118"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:02.426231" elapsed="1.213437"/>
+</kw>
+<kw name="Selecionar Hobbies 'Movies'" owner="cadastro" source_name="Selecionar Hobbies ${Hobbies}">
+<if>
+<branch type="IF" condition="${Hobbies} == 'Cricket'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${HOBBIE_CRICKET}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:03.648866" elapsed="0.000657"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:03.649523" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-01T21:37:03.648163" elapsed="0.001360"/>
+</branch>
+<branch type="ELSE IF" condition="${Hobbies} == 'Movies'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:03.651869" level="INFO">Clicking element 'xpath=//input[@value="Movies"]'.</msg>
+<arg>${HOBBIE_MOVIES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:03.651869" elapsed="0.109798"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-01T21:37:08.762168" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-01T21:37:03.761667" elapsed="5.000501"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:03.651869" elapsed="5.110299"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${HOBBIE_HOCKEY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:08.762168" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:08.762168" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-01T21:37:08.762168" elapsed="0.004060"/>
+</branch>
+<status status="PASS" start="2024-08-01T21:37:03.639668" elapsed="5.126560"/>
+</if>
+<status status="PASS" start="2024-08-01T21:37:03.639668" elapsed="5.126560"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-01T21:37:08.766228" elapsed="2.417312"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:08.766228" elapsed="2.417312"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:36:51.027324" elapsed="20.156216"/>
+</test>
+<test id="s1-t2" name="Validar cadastro selecionando Hobbies" line="20">
+<kw name="Dado que acesso o site" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:11.191418" level="INFO">Opening browser 'Chrome' to base url 'https://demo.automationtesting.in/Register.html'.</msg>
+<arg>url=https://demo.automationtesting.in/Register.html</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-01T21:37:11.191418" elapsed="9.749393"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-08-01T21:37:20.940811" elapsed="0.400104"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:11.191418" elapsed="10.157419"/>
+</kw>
+<kw name="Dado que eu preencha os campos do formulário" owner="cadastro">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:21.348837" level="INFO">Typing text 'EVELYN' into text field 'xpath=//input[@placeholder="First Name"]'.</msg>
+<arg>${NOME}</arg>
+<arg>EVELYN</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:21.348837" elapsed="0.289049"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:21.637886" level="INFO">Typing text 'TESTE' into text field 'xpath=//input[@placeholder="Last Name"]'.</msg>
+<arg>${SOBRE_NOME}</arg>
+<arg>TESTE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:21.637886" elapsed="0.197553"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:21.835439" level="INFO">Typing text 'AV TESTE RECIFE' into text field 'xpath=//textarea[@ng-model="Adress"]'.</msg>
+<arg>${ENDERECO}</arg>
+<arg>AV TESTE RECIFE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:21.835439" elapsed="0.164314"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:21.999753" level="INFO">Typing text 'TESTE@TESTE.COM.BR' into text field 'xpath=//input[@ng-model="EmailAdress"]'.</msg>
+<arg>${EMAIL}</arg>
+<arg>TESTE@TESTE.COM.BR</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:21.999753" elapsed="0.225706"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:22.225459" level="INFO">Typing text '81999999999' into text field 'xpath=//input[@ng-model="Phone"]'.</msg>
+<arg>${PHONE}</arg>
+<arg>81999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:22.225459" elapsed="0.199184"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:21.348837" elapsed="1.075806"/>
+</kw>
+<kw name="Selecionar Hobbies 'Hockey'" owner="cadastro" source_name="Selecionar Hobbies ${Hobbies}">
+<if>
+<branch type="IF" condition="${Hobbies} == 'Cricket'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${HOBBIE_CRICKET}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:22.424643" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:22.424643" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-01T21:37:22.424643" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE IF" condition="${Hobbies} == 'Movies'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${HOBBIE_MOVIES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:22.430159" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-01T21:37:22.430159" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-01T21:37:22.430159" elapsed="0.001613"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-01T21:37:22.431772" level="INFO">Clicking element 'xpath=//input[@value="Hockey"]'.</msg>
+<arg>${HOBBIE_HOCKEY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-01T21:37:22.431772" elapsed="0.120592"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-01T21:37:27.552904" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-01T21:37:22.552364" elapsed="5.000540"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:22.431772" elapsed="5.121132"/>
+</branch>
+<status status="PASS" start="2024-08-01T21:37:22.424643" elapsed="5.128261"/>
+</if>
+<status status="PASS" start="2024-08-01T21:37:22.424643" elapsed="5.128261"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-01T21:37:27.552904" elapsed="2.240232"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:27.552904" elapsed="2.241404"/>
+</kw>
+<status status="PASS" start="2024-08-01T21:37:11.191418" elapsed="18.602890"/>
+</test>
+<status status="PASS" start="2024-08-01T21:36:50.727632" elapsed="39.066676"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Primeiro Teste">Primeiro Teste</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-01T21:37:11.191418" level="WARN">Multiple tests with name 'Validar cadastro selecionando Hobbies' executed in suite 'Primeiro Teste'.</msg>
+</errors>
+</robot>

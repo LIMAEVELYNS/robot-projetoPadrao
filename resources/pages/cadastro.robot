@@ -15,9 +15,15 @@ Selecionar genero ${genero}
     IF    ${genero} == 'Feminino'
         Click Element    ${GENDER_FEMININO}
     ELSE
-        Click Element    ${GENDER_MASCULINO}
-        Sleep    5
+        Click Element    ${GENDER_MASCULINO}       
     END
-    
-    
+
+Selecionar Hobbies ${Hobbie}
+    IF    ${Hobbie} == 'Cricket'
+        Click Element    ${HOBBIE_CRICKET}        
+    ELSE IF   ${Hobbie} == 'Movies'
+        Click Element    ${HOBBIE_MOVIES}        
+    ELSE
+        Click Element    ${HOBBIE_HOCKEY}                    
+    END  
    
