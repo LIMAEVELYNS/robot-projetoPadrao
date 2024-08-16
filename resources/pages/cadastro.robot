@@ -25,5 +25,12 @@ Selecionar Hobbies ${Hobbie}
         Click Element    ${HOBBIE_MOVIES}        
     ELSE
         Click Element    ${HOBBIE_HOCKEY}                    
-    END  
+    END
+
+Seleciona idioma 
+    Click Element    ${LANGUAGE}
+    Click Element    ${LANGUAGE_OPC}
+
+Seleciona skill
+        Select From List By Value ${SKILL}    ${SKILL_ANDROID} 
    
